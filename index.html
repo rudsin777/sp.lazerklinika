@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SP Lāzerklīnika — lāzerklīnika Rēzeknē ar Fotona SP Dynamis</title>
+<meta name="description" content="SP Lāzerklīnika Rēzeknē: lāzerepilācija, ādas atjaunošana, liftings bez injekcijām, asinsvadu un aknes ārstēšana, dermatologa konsultācijas. Atbrīvošanas aleja 98, +371 25 425 412.">
+<meta name="theme-color" content="#222121">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+@property --r{syntax:'<length>';inherits:true;initial-value:0px}
+
+:root{
+  --stone:#222121;
+  --stone-2:#1c1b1b;
+  --stone-3:#2b2a28;
+  --stone-line:rgba(255,255,255,.11);
+  --gold:#A59C64;
+  --gold-hi:#C9BE86;
+  --gold-deep:#6B653E;
+  --bone:#EEECE6;
+  --paper:#F8F7F3;
+  --ink:#222121;
+  --ink-soft:#45423d;
+  --muted:#67645d;
+  --line:#DCD9D0;
+  --on-dark:#EDEAE1;
+  --on-dark-soft:#B9B5A9;
+
+  --font-display:'Cormorant', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body:'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  --wrap:1200px;
+  --radius:6px;
+  --fade:.3s ease;
+  --stone-tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='1600' viewBox='0 0 1600 1600' preserveAspectRatio='xMidYMid slice'%3E%3Cfilter id='f' x='0' y='0' width='100%' height='100%'%3E%3CfeTurbulence type='turbulence' baseFrequency='.009' numOctaves='3' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 .95 0 0 0 -.62 .12'/%3E%3C/filter%3E%3Crect width='1600' height='1600' filter='url(%23f)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='1600' viewBox='0 0 1600 1600' preserveAspectRatio='xMidYMid slice'%3E%3Cfilter id='f' x='0' y='0' width='100%' height='100%'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.004' numOctaves='5' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .16 -.05'/%3E%3C/filter%3E%3Crect width='1600' height='1600' filter='url(%23f)'/%3E%3C/svg%3E");
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;font-family:var(--font-body);color:var(--ink);background:var(--paper);
+  font-size:clamp(1rem,.97rem + .15vw,1.0625rem);line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,svg,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none;transition:color var(--fade),background-color var(--fade),border-color var(--fade),opacity var(--fade)}
+button{font:inherit;transition:color var(--fade),background-color var(--fade),border-color var(--fade),opacity var(--fade)}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.05;margin:0;letter-spacing:-.005em}
+p{margin:0}
+.wrap{width:min(var(--wrap),92vw);margin-inline:auto}
+.section{padding:clamp(4.5rem,9vw,7.5rem) 0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.stone{background-color:var(--stone);background-image:var(--stone-tex);background-size:cover;background-position:center;background-repeat:no-repeat;color:var(--on-dark)}
+
+h2.title{font-size:clamp(2.2rem,1.4rem + 3vw,3.6rem);max-width:18ch;text-wrap:balance}
+h2.title::before{content:"";display:block;width:26px;height:26px;border:3px solid var(--gold);border-radius:50%;margin-bottom:1.1rem}
+.lead{color:var(--ink-soft);max-width:58ch;margin-top:1.2rem;font-size:clamp(1.05rem,1rem + .25vw,1.18rem)}
+.stone .lead{color:var(--on-dark-soft)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  font-family:var(--font-body);font-weight:600;font-size:.98rem;letter-spacing:.01em;
+  padding:.9rem 1.55rem;border-radius:100px;cursor:pointer;border:1.5px solid transparent;
+  transition:background-color var(--fade),color var(--fade),border-color var(--fade);
+}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-gold{background:var(--gold);color:#1c1b1b}
+.btn-gold:hover{background:var(--gold-hi)}
+.btn-line{background:transparent;border-color:rgba(255,255,255,.45);color:#fff}
+.btn-line:hover{background:#fff;color:var(--stone);border-color:#fff}
+.btn-ink{background:var(--stone);color:#fff}
+.btn-ink:hover{background:var(--gold-deep)}
+.btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+
+/* ---------- header ---------- */
+.header{position:fixed;inset:0 0 auto 0;z-index:80;padding:.9rem 0;
+  transition:background-color var(--fade),box-shadow var(--fade),padding var(--fade)}
+.header.scrolled{background:rgba(30,29,29,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--stone-line);padding:.5rem 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.logo{display:block;flex:none}
+.logo img{height:64px;width:64px;transition:height var(--fade),width var(--fade)}
+.header.scrolled .logo img{height:50px;width:50px}
+.nav{display:flex;align-items:center;gap:1.7rem}
+.nav a{font-weight:500;font-size:.94rem;color:var(--on-dark);padding:.35rem 0;position:relative;transition:color var(--fade)}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--gold-hi);transition:width var(--fade)}
+.nav a:hover{color:#fff}
+.nav a:hover::after,.nav a:focus-visible::after{width:100%}
+.header-right{display:flex;align-items:center;gap:1.1rem}
+.lang{display:flex;gap:.1rem;font-weight:600;font-size:.82rem}
+.lang button{background:none;border:0;color:rgba(255,255,255,.55);cursor:pointer;padding:.3rem .4rem;border-radius:6px;letter-spacing:.04em}
+.lang button:hover{color:#fff}
+.lang button.active{color:var(--gold-hi)}
+.header-tel{display:inline-flex;align-items:center;gap:.5rem;color:#fff;font-weight:600;font-size:.95rem;
+  border:1.5px solid rgba(201,190,134,.5);padding:.5rem 1rem;border-radius:100px;
+  transition:color var(--fade),background-color var(--fade),border-color var(--fade)}
+.header-tel:hover{background:var(--gold);border-color:var(--gold);color:#1c1b1b}
+.header-tel svg{width:16px;height:16px}
+
+.burger{display:none;position:relative;z-index:2;background:none;border:0;cursor:pointer;width:44px;height:44px}
+.burger span{position:absolute;left:10px;right:10px;height:1.5px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .2s ease,background-color .3s ease}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger:hover span{background:var(--gold-hi)}
+.burger.is-open span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger.is-open span:nth-child(2){opacity:0}
+.burger.is-open span:nth-child(3){top:21px;transform:rotate(-45deg)}
+
+.mnav{position:fixed;inset:0;z-index:70;background-color:var(--stone);background-image:var(--stone-tex);background-size:cover;background-position:center;background-repeat:no-repeat;
+  display:flex;flex-direction:column;justify-content:center;padding:calc(84px + 1rem) 1.6rem calc(2rem + env(safe-area-inset-bottom,0px));
+  opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s}
+.mnav.open{opacity:1;visibility:visible}
+.mnav-links{display:flex;flex-direction:column}
+.mnav-links a{color:#fff;font-family:var(--font-display);font-weight:600;font-size:clamp(1.9rem,8vw,2.6rem);line-height:1.1;
+  padding:.55rem 0;border-bottom:1px solid var(--stone-line);opacity:0;transition:opacity .45s ease,color var(--fade)}
+.mnav.open .mnav-links a{opacity:1}
+.mnav.open .mnav-links a:nth-child(2){transition-delay:.05s,0s}
+.mnav.open .mnav-links a:nth-child(3){transition-delay:.1s,0s}
+.mnav.open .mnav-links a:nth-child(4){transition-delay:.15s,0s}
+.mnav.open .mnav-links a:nth-child(5){transition-delay:.2s,0s}
+.mnav.open .mnav-links a:nth-child(6){transition-delay:.25s,0s}
+.mnav-links a:hover{color:var(--gold-hi)}
+.mnav-foot{margin-top:1.8rem;display:flex;flex-direction:column;gap:1.1rem}
+.mnav-foot a{color:var(--gold-hi);font-weight:600;font-size:1.1rem}
+.mnav-foot a:hover{color:#fff}
+.mnav-lang{display:inline-flex;align-self:flex-start;border:1px solid var(--stone-line);border-radius:100px;padding:.25rem}
+.mnav-lang button{padding:.4rem .85rem;border-radius:100px;font-size:.9rem}
+.mnav-lang button.active{background:var(--gold);color:#1c1b1b}
+.mnav-lang button:not(.active):hover{color:#fff}
+body.nav-open .header{background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+
+/* ---------- hero ---------- */
+.hero{
+  --cx:72%;--cy:52%;--R:min(22vw,290px);
+  position:relative;min-height:100svh;display:flex;align-items:center;
+  background:var(--stone);color:#fff;overflow:hidden;isolation:isolate;
+  animation:aperture 1.8s cubic-bezier(.2,.75,.2,1) .25s both;
+}
+@keyframes aperture{from{--r:0px}to{--r:var(--R)}}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%;z-index:-3}
+.hero-shade{position:absolute;inset:0;z-index:-2;
+  background:radial-gradient(circle at var(--cx) var(--cy),rgba(34,33,33,.06) 0,rgba(34,33,33,.1) var(--r),rgba(30,29,29,.86) calc(var(--r) + 1.5px))}
+.hero-shade::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,27,27,.55) 0%,rgba(28,27,27,0) 55%)}
+.hero-ring{position:absolute;z-index:-1;left:var(--cx);top:var(--cy);width:calc(var(--r) * 2 + 34px);aspect-ratio:1;
+  border:2px solid var(--gold);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}
+.hero-ring::before{content:"";position:absolute;inset:-14px;border:1px solid rgba(201,190,134,.28);border-radius:50%}
+.ring-tag{position:absolute;left:50%;display:inline-flex;align-items:center;gap:.45rem;font-size:.78rem;font-weight:500;letter-spacing:.03em;color:var(--gold-hi);white-space:nowrap;
+  background:var(--stone-2);border:1px solid rgba(165,156,100,.55);border-radius:100px;padding:.3rem .8rem;
+  opacity:0;animation:tagIn .8s ease 1.7s forwards}
+.ring-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.ring-tag.nd::before{background:#B24E4E}
+.ring-tag.nd{top:0;transform:translate(-50%,-50%)}
+.ring-tag.er{bottom:0;transform:translate(-50%,50%)}
+@keyframes tagIn{to{opacity:1}}
+
+.hero-inner{position:relative;width:min(var(--wrap),92vw);margin-inline:auto;padding:calc(110px + 3vh) 0 clamp(3rem,8vh,5rem)}
+.hero-copy{max-width:min(35rem,46%)}
+.hero-kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.9rem;font-weight:500;color:var(--gold-hi);margin-bottom:1.4rem}
+.hero-kicker svg{width:18px;height:18px}
+.hero h1{font-size:clamp(2.6rem,1.2rem + 4vw,4.8rem);line-height:.98;font-weight:600;text-wrap:balance}
+.hero-sub{margin-top:1.5rem;max-width:44ch;color:#dedad0;font-size:clamp(1.02rem,.98rem + .3vw,1.2rem)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}
+.hero-load{opacity:0;animation:fadeIn .9s ease forwards}
+.hero-load.d1{animation-delay:.5s}.hero-load.d2{animation-delay:.75s}.hero-load.d3{animation-delay:1s}.hero-load.d4{animation-delay:1.2s}
+@keyframes fadeIn{to{opacity:1}}
+.hero-scroll{position:absolute;left:50%;bottom:1.3rem;width:1px;height:46px;background:rgba(255,255,255,.18);overflow:hidden;transform:translateX(-50%)}
+.hero-scroll::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--gold-hi);animation:drip 2.4s ease-in-out infinite}
+@keyframes drip{to{top:100%}}
+
+.strip{background:var(--stone-2);color:var(--on-dark);border-top:1px solid var(--stone-line)}
+.strip-inner{display:grid;grid-template-columns:repeat(3,1fr)}
+.strip-item{display:flex;gap:1rem;align-items:flex-start;padding:1.35rem 1.4rem;border-left:1px solid var(--stone-line)}
+.strip-item:first-child{border-left:0;padding-left:0}
+.strip-item svg{width:26px;height:26px;color:var(--gold);flex:none;margin-top:2px}
+.strip-item h3{font-family:var(--font-body);font-size:.98rem;font-weight:600;color:#fff;letter-spacing:0}
+.strip-item p{font-size:.88rem;color:var(--on-dark-soft);margin-top:.15rem;line-height:1.45}
+
+/* ---------- technology ---------- */
+.tech{background:var(--bone)}
+.tech-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.waves{margin-top:2rem;display:grid;gap:0;border-top:1px solid var(--line)}
+.wave{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;padding:1.2rem 0;border-bottom:1px solid var(--line)}
+.wave-dot{width:14px;height:14px;border-radius:50%;margin-top:.45rem}
+.wave-dot.er{background:var(--gold);box-shadow:0 0 0 4px rgba(165,156,100,.22)}
+.wave-dot.nd{background:#8C3B3B;box-shadow:0 0 0 4px rgba(140,59,59,.18)}
+.wave h3{font-family:var(--font-body);font-size:1.02rem;font-weight:600;letter-spacing:0}
+.wave p{color:var(--muted);font-size:.96rem;margin-top:.2rem}
+.tech-cta{margin-top:2rem}
+.diagram{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(.8rem,2vw,1.4rem)}
+.diagram svg{width:100%;height:auto}
+.diagram text{font-family:var(--font-body)}
+
+/* ---------- procedures ---------- */
+.procs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.procs-head .lead{margin-top:0;max-width:40ch}
+.proc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:3rem;background:var(--stone-line);border:1px solid var(--stone-line);border-radius:var(--radius);overflow:hidden}
+.proc{display:flex;flex-direction:column;padding:1.8rem 1.6rem 1.5rem;background:rgba(28,27,27,.86);min-height:250px;
+  transition:background-color var(--fade)}
+.proc:hover{background:rgba(52,50,40,.92)}
+.proc-ico{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(201,190,134,.45);display:grid;place-items:center;margin-bottom:1.3rem;
+  transition:background-color var(--fade),border-color var(--fade)}
+.proc-ico svg{width:22px;height:22px;color:var(--gold-hi);transition:color var(--fade)}
+.proc:hover .proc-ico{background:var(--gold);border-color:var(--gold)}
+.proc:hover .proc-ico svg{color:#1c1b1b}
+.proc h3{font-size:1.65rem;color:#fff}
+.proc p{color:var(--on-dark-soft);font-size:.94rem;margin-top:.5rem;flex:1}
+.proc-foot{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-top:1.4rem;padding-top:1rem;border-top:1px solid var(--stone-line)}
+.proc-from{font-family:var(--font-display);font-size:1.45rem;font-weight:600;color:var(--gold-hi)}
+.proc-more{font-size:.86rem;font-weight:500;color:var(--on-dark-soft);transition:color var(--fade)}
+.proc:hover .proc-more{color:#fff}
+
+/* ---------- dermatologist ---------- */
+.derma{background:var(--paper)}
+.derma-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,6vw,5rem);align-items:stretch}
+.doc{position:relative;border-radius:var(--radius);overflow:hidden;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem}
+.doc-mark{position:absolute;top:2rem;right:2rem;width:clamp(120px,16vw,190px);aspect-ratio:1;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;
+  font-family:var(--font-display);font-size:clamp(2.6rem,4vw,3.8rem);font-weight:600;color:var(--gold-hi);letter-spacing:.02em}
+.doc-role{color:var(--gold-hi);font-size:.92rem;font-weight:500}
+.doc h3{font-size:clamp(2.2rem,1.6rem + 2vw,3.2rem);color:#fff;margin-top:.4rem}
+.doc-note{color:var(--on-dark-soft);font-size:.92rem;margin-top:.8rem;max-width:34ch}
+.dlist{margin-top:2rem;border-top:1px solid var(--line)}
+.ditem{display:grid;grid-template-columns:44px 1fr;gap:1rem;padding:1.15rem 0;border-bottom:1px solid var(--line)}
+.ditem svg{width:26px;height:26px;color:var(--gold-deep);margin-top:2px}
+.ditem h4{font-family:var(--font-body);font-size:1.02rem;font-weight:600;letter-spacing:0}
+.ditem p{color:var(--muted);font-size:.95rem;margin-top:.15rem}
+.derma-cta{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* ---------- prices ---------- */
+.price-bar{display:flex;justify-content:space-between;align-items:center;gap:1rem 1.5rem;flex-wrap:wrap;margin-top:2.6rem}
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap}
+.tab{background:transparent;border:1px solid var(--stone-line);color:var(--on-dark-soft);cursor:pointer;
+  padding:.55rem 1rem;border-radius:100px;font-size:.9rem;font-weight:500;white-space:nowrap}
+.tab:hover{border-color:var(--gold);color:#fff}
+.tab.active{background:var(--gold);border-color:var(--gold);color:#1c1b1b}
+.search{position:relative;flex:0 1 300px}
+.search svg{position:absolute;left:.95rem;top:50%;width:17px;height:17px;transform:translateY(-50%);color:var(--on-dark-soft);pointer-events:none}
+.search input{width:100%;background:rgba(0,0,0,.28);border:1px solid var(--stone-line);border-radius:100px;padding:.65rem 1rem .65rem 2.6rem;
+  color:#fff;font:inherit;font-size:.95rem;transition:border-color var(--fade),background-color var(--fade)}
+.search input::placeholder{color:#8f8b80}
+.search input:hover{border-color:rgba(201,190,134,.5)}
+.search input:focus{outline:none;border-color:var(--gold-hi);background:rgba(0,0,0,.4)}
+.price-panel{margin-top:1.4rem;background:rgba(20,19,19,.55);border:1px solid var(--stone-line);border-radius:var(--radius);padding:clamp(1.2rem,3vw,2.2rem);min-height:260px}
+.price-cols{columns:2;column-gap:3rem}
+.pg{break-inside:avoid;margin-bottom:1.6rem}
+.pg:last-child{margin-bottom:0}
+.pg h4{font-family:var(--font-display);font-size:1.4rem;color:var(--gold-hi);font-weight:600;margin-bottom:.35rem;padding:0 .6rem}
+.pg ul{list-style:none;margin:0;padding:0}
+.row{display:flex;align-items:flex-end;gap:.7rem;padding:.55rem .6rem;border-radius:4px;break-inside:avoid;transition:background-color var(--fade)}
+.row:hover{background:rgba(255,255,255,.05)}
+.row.hit{background:rgba(165,156,100,.16)}
+.row .nm{color:var(--on-dark);font-size:.97rem;line-height:1.4}
+.row .nm small{display:block;color:#98948a;font-size:.84rem}
+.row .dots{flex:1;min-width:1.2rem;border-bottom:1px dotted rgba(255,255,255,.22);margin-bottom:.35rem}
+.row .pr{font-weight:600;color:var(--gold-hi);white-space:nowrap;font-variant-numeric:tabular-nums;font-size:.97rem}
+.price-note{margin-top:1.1rem;color:#98948a;font-size:.88rem}
+.empty{color:var(--on-dark-soft);padding:1rem .6rem}
+.empty a{color:var(--gold-hi);font-weight:600}
+.empty a:hover{color:#fff}
+
+/* ---------- visit ---------- */
+.visit{background:var(--bone)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3.2rem;position:relative}
+.step{position:relative;padding-top:4.4rem}
+.step-num{position:absolute;top:0;left:0;width:52px;height:52px;border-radius:50%;border:1.5px solid var(--gold-deep);display:grid;place-items:center;
+  font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--gold-deep);background:var(--bone)}
+.step::before{content:"";position:absolute;top:26px;left:64px;right:-2rem;height:1px;background:var(--line)}
+.step:last-child::before{display:none}
+.step h3{font-size:1.7rem}
+.step p{color:var(--muted);font-size:.96rem;margin-top:.5rem;max-width:30ch}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2.5rem,6vw,4.5rem);margin-top:2.8rem}
+.cinfo{display:flex;flex-direction:column;gap:1.35rem}
+.cline{display:flex;gap:1rem;align-items:flex-start}
+.cline svg{width:22px;height:22px;color:var(--gold);flex:none;margin-top:3px}
+.cline .k{font-size:.82rem;font-weight:500;color:#98948a;margin-bottom:.1rem}
+.cline .v{color:var(--on-dark);font-size:1.03rem}
+.cline a.v:hover{color:var(--gold-hi)}
+.socials{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.2rem}
+.soc{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--stone-line);border-radius:100px;padding:.45rem .95rem;font-size:.92rem;color:var(--on-dark);
+  transition:border-color var(--fade),color var(--fade),background-color var(--fade)}
+.soc svg{width:17px;height:17px;margin:0;color:var(--gold-hi);transition:color var(--fade)}
+.soc:hover{border-color:var(--gold);background:var(--gold);color:#1c1b1b}
+.soc:hover svg{color:#1c1b1b}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--stone-line);height:240px;margin-top:.3rem}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.85) contrast(1.05)}
+.form{background:rgba(20,19,19,.55);border:1px solid var(--stone-line);border-radius:var(--radius);padding:clamp(1.4rem,3vw,2.2rem)}
+.form h3{font-size:2rem;color:#fff;margin-bottom:1.4rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{margin-bottom:1.05rem}
+.field label{display:block;font-size:.85rem;font-weight:500;color:#c9c5ba;margin-bottom:.4rem}
+.field input,.field textarea,.field select{width:100%;background:rgba(0,0,0,.3);border:1px solid var(--stone-line);border-radius:8px;padding:.8rem .9rem;
+  color:#fff;font:inherit;font-size:1rem;transition:border-color var(--fade),background-color var(--fade)}
+.field select{appearance:none;-webkit-appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C9BE86' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .85rem center;background-size:18px;padding-right:2.6rem}
+.field select option{background:#2b2a28;color:#fff}
+.field input:hover,.field textarea:hover,.field select:hover{border-color:rgba(201,190,134,.45)}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold-hi)}
+.field textarea{resize:vertical;min-height:110px}
+.form-note{font-size:.82rem;color:#98948a;margin-top:.9rem}
+.form-ok{display:none;background:rgba(165,156,100,.16);border:1px solid rgba(165,156,100,.45);color:#efe9cf;padding:.85rem 1rem;border-radius:8px;margin-top:1rem;font-size:.94rem}
+.form-ok.show{display:block}
+
+/* ---------- footer ---------- */
+.footer{background:var(--stone-2);color:var(--on-dark-soft);padding:clamp(3rem,6vw,4.5rem) 0 calc(2rem + env(safe-area-inset-bottom,0px))}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--stone-line)}
+.footer-logo{width:84px;height:84px}
+.footer p{font-size:.92rem;margin-top:1.1rem;max-width:36ch}
+.footer h4{font-family:var(--font-body);font-weight:600;font-size:.88rem;color:#fff;margin-bottom:1rem;letter-spacing:0}
+.footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.55rem}
+.footer ul a{font-size:.94rem;color:var(--on-dark-soft)}
+.footer ul a:hover{color:var(--gold-hi)}
+.footer-bottom{display:flex;justify-content:space-between;gap:.6rem 1.5rem;flex-wrap:wrap;padding-top:1.6rem;font-size:.84rem;color:#8a8679}
+
+/* ---------- floating call ---------- */
+.fab{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:60;width:56px;height:56px;border-radius:50%;
+  background:var(--gold);color:#1c1b1b;display:none;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.55);opacity:0;visibility:hidden;
+  transition:background-color var(--fade),opacity var(--fade),visibility var(--fade)}
+.fab:hover{background:var(--gold-hi)}
+.fab svg{width:24px;height:24px}
+body.show-fab .fab{opacity:1;visibility:visible}
+body.nav-open .fab{opacity:0;visibility:hidden}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .nav{gap:1.2rem}
+  .nav a{font-size:.9rem}
+  .header-tel span{display:none}
+  .header-tel{padding:.55rem}
+}
+@media (max-width:1000px){
+  .nav,.header-tel,.header-right>.lang{display:none}
+  .burger{display:block}
+  .logo img,.header.scrolled .logo img{height:52px;width:52px}
+  .fab{display:grid}
+  .hero{--cx:50%;--cy:33%;--R:min(26vw,190px);align-items:flex-end}
+  .hero-copy{max-width:40rem}
+  .hero-inner{padding-top:calc(var(--R) * 2 + 34vh)}
+  .hero-scroll{display:none}
+  .tech-grid,.derma-grid,.contact-grid{grid-template-columns:1fr}
+  .diagram{max-width:640px}
+  .proc-grid{grid-template-columns:1fr 1fr}
+  .proc:last-child{grid-column:span 2}
+  .steps{grid-template-columns:1fr 1fr;row-gap:2.6rem}
+  .step:nth-child(2)::before{display:none}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .footer-top>div:first-child{grid-column:span 2}
+}
+@media (max-width:760px){
+  .strip-inner{grid-template-columns:1fr}
+  .strip-item{border-left:0;border-top:1px solid var(--stone-line);padding:1.1rem 0}
+  .strip-item:first-child{border-top:0}
+  .price-cols{columns:1}
+  .search{flex:1 1 100%}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 -4vw;padding:0 4vw .3rem;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+}
+@media (max-width:620px){
+  .hero{--cy:27%;--R:min(30vw,150px)}
+  .hero-inner{padding-top:calc(var(--R) * 2 + 30vh);padding-bottom:5.5rem}
+  .ring-tag{font-size:.7rem;padding:.25rem .6rem}
+  .hero-cta .btn{flex:1 1 100%}
+  .proc-grid{grid-template-columns:1fr}
+  .proc:last-child{grid-column:auto}
+  .proc{min-height:0}
+  .steps{grid-template-columns:1fr}
+  .step::before{display:none}
+  .frow{grid-template-columns:1fr;gap:0}
+  .doc{min-height:360px;padding:1.5rem}
+  .doc-mark{top:1.5rem;right:1.5rem}
+  .footer-top{grid-template-columns:1fr}
+  .footer-top>div:first-child{grid-column:auto}
+  .row .nm{font-size:.93rem}
+  .diagram text{font-size:19px}
+}
+@media (max-width:380px){
+  .ring-tag{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;transition-duration:.001ms!important}
+  .hero{--r:var(--R)}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H6.5v3.5H9V21h3.5v-7.5H15l.5-3.5h-3V7a1 1 0 0 1 1-1H15z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></g></symbol>
+</svg>
+
+<header class="header" id="header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo" aria-label="SP Lāzerklīnika">
+      <img src="logo.svg" alt="SP Lāzerklīnika" width="64" height="64">
+    </a>
+    <nav class="nav" aria-label="Galvenā navigācija">
+      <a href="#about" data-i18n="nav_about">Klīnika</a>
+      <a href="#procedures" data-i18n="nav_procs">Procedūras</a>
+      <a href="#derma" data-i18n="nav_derma">Dermatologs</a>
+      <a href="#prices" data-i18n="nav_prices">Cenrādis</a>
+      <a href="#visit" data-i18n="nav_visit">Vizīte</a>
+      <a href="#contact" data-i18n="nav_contact">Kontakti</a>
+    </nav>
+    <div class="header-right">
+      <div class="lang" role="group" aria-label="Valoda / Язык / Language">
+        <button type="button" data-lang="lv" class="active">LV</button>
+        <button type="button" data-lang="ru">RU</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <a href="tel:+37125425412" class="header-tel" aria-label="+371 25 425 412">
+        <svg aria-hidden="true"><use href="#i-phone"/></svg><span>+371 25 425 412</span>
+      </a>
+      <button class="burger" id="burger" type="button" aria-label="Izvēlne" aria-expanded="false" aria-controls="mnav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <nav class="mnav-links" aria-label="Mobilā navigācija">
+    <a href="#about" data-i18n="nav_about">Klīnika</a>
+    <a href="#procedures" data-i18n="nav_procs">Procedūras</a>
+    <a href="#derma" data-i18n="nav_derma">Dermatologs</a>
+    <a href="#prices" data-i18n="nav_prices">Cenrādis</a>
+    <a href="#visit" data-i18n="nav_visit">Vizīte</a>
+    <a href="#contact" data-i18n="nav_contact">Kontakti</a>
+  </nav>
+  <div class="mnav-foot">
+    <div>
+      <a href="tel:+37125425412">+371 25 425 412</a><br>
+      <a href="mailto:sp.lazerklinika@gmail.com">sp.lazerklinika@gmail.com</a>
+    </div>
+    <div class="mnav-lang lang" role="group" aria-label="Valoda / Язык / Language">
+      <button type="button" data-lang="lv" class="active">LV</button>
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </div>
+</div>
+
+<main>
+<section class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="https://assets.mixkit.co/videos/52153/52153-thumb-720-0.jpg">
+    <source src="https://assets.mixkit.co/videos/52153/52153-720.mp4" type="video/mp4">
+    <source src="https://assets.mixkit.co/videos/52153/52153-360.mp4" type="video/mp4">
+  </video>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-ring" aria-hidden="true">
+    <span class="ring-tag nd">Nd:YAG 1064 nm</span>
+    <span class="ring-tag er">Er:YAG 2940 nm</span>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="hero-kicker hero-load d1"><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="hero_kicker">Ārstniecības iestāde Rēzeknē</span></span>
+      <h1 class="hero-load d2" data-i18n="hero_h1">Vienīgā lāzerklīnika Latgalē ar Fotona SP Dynamis</h1>
+      <p class="hero-sub hero-load d3" data-i18n="hero_sub">Lāzerepilācija, ādas atjaunošana, liftings bez injekcijām un dermatologa konsultācijas Atbrīvošanas alejā 98.</p>
+      <div class="hero-cta hero-load d4">
+        <a href="tel:+37125425412" class="btn btn-gold"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="hero_cta1">Pieteikties pa tālruni</span></a>
+        <a href="#prices" class="btn btn-line" data-i18n="hero_cta2">Skatīt cenrādi</a>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="hero-scroll" aria-label="Uz leju"></a>
+</section>
+
+<div class="strip">
+  <div class="wrap strip-inner">
+    <div class="strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h.01M12 7v10M16 9v6"/></svg>
+      <div><h3>Fotona SP Dynamis</h3><p data-i18n="hs1_p">Divi lāzeri vienā iekārtā — virspusējai un dziļai iedarbībai.</p></div>
+    </div>
+    <div class="strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="M12 9v6M9 12h6"/></svg>
+      <div><h3 data-i18n="hs2_t">Ārstniecības iestāde</h3><p data-i18n="hs2_p">Ārstniecības iestādes kods 006000009.</p></div>
+    </div>
+    <div class="strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m20 20-5.5-5.5M10 7.5v5M7.5 10h5"/></svg>
+      <div><h3 data-i18n="hs3_t">Dermatologs klīnikā</h3><p data-i18n="hs3_p">Dr. Ina Maksimova — konsultācijas un dermatoskopija.</p></div>
+    </div>
+  </div>
+</div>
+
+<section class="section tech" id="about">
+  <div class="wrap tech-grid">
+    <div>
+      <h2 class="title" data-i18n="tech_title">Viena iekārta, divi lāzeri</h2>
+      <p class="lead" data-i18n="tech_lead">Fotona SP Dynamis apvieno divus viļņu garumus. Tāpēc vienā klīnikā var ārstēt gan ādas virsmu, gan dziļākos slāņus — no pūtīšu rētām līdz asinsvadiem un liftingam.</p>
+      <div class="waves">
+        <div class="wave"><span class="wave-dot er"></span><div><h3>Er:YAG, 2940 nm</h3><p data-i18n="tech_er">Strādā ādas virskārtā: pīlingi, ādas atjaunošana, rētu izlīdzināšana, veidojumu noņemšana.</p></div></div>
+        <div class="wave"><span class="wave-dot nd"></span><div><h3>Nd:YAG, 1064 nm</h3><p data-i18n="tech_nd">Sniedzas dziļāk: asinsvadi un rozācija, ādas savilkšana, epilācija, nagu sēnīte.</p></div></div>
+      </div>
+      <div class="tech-cta"><a href="#procedures" class="btn btn-ghost" data-i18n="tech_cta">Apskatīt procedūras</a></div>
+    </div>
+    <figure class="diagram" style="margin:0">
+      <svg viewBox="0 0 560 400" role="img" aria-labelledby="diagTitle">
+        <title id="diagTitle">Er:YAG and Nd:YAG penetration depth</title>
+        <defs>
+          <linearGradient id="gEpi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EBD7C6"/><stop offset="1" stop-color="#E3C8B3"/></linearGradient>
+          <linearGradient id="gDer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6C3AE"/><stop offset="1" stop-color="#DDB29B"/></linearGradient>
+          <linearGradient id="gSub" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1E3C6"/><stop offset="1" stop-color="#EAD6AE"/></linearGradient>
+          <linearGradient id="bEr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9BE86" stop-opacity=".95"/><stop offset="1" stop-color="#A59C64" stop-opacity=".15"/></linearGradient>
+          <linearGradient id="bNd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A94A4A" stop-opacity=".85"/><stop offset="1" stop-color="#8C3B3B" stop-opacity=".12"/></linearGradient>
+          <clipPath id="skinClip"><rect x="20" y="92" width="400" height="290" rx="6"/></clipPath>
+        </defs>
+        <g clip-path="url(#skinClip)">
+          <rect x="20" y="92" width="400" height="44" fill="url(#gEpi)"/>
+          <path d="M20 136 Q60 126 100 136 T180 136 T260 136 T340 136 T420 136 V250 H20Z" fill="url(#gDer)"/>
+          <rect x="20" y="250" width="400" height="132" fill="url(#gSub)"/>
+          <g fill="#F6EBD2" stroke="#E0C99A" stroke-width="1.2">
+            <ellipse cx="60" cy="290" rx="26" ry="18"/><ellipse cx="120" cy="318" rx="30" ry="20"/><ellipse cx="185" cy="286" rx="24" ry="17"/>
+            <ellipse cx="250" cy="322" rx="30" ry="21"/><ellipse cx="318" cy="290" rx="27" ry="18"/><ellipse cx="385" cy="320" rx="28" ry="20"/>
+            <ellipse cx="90" cy="360" rx="26" ry="16"/><ellipse cx="220" cy="364" rx="28" ry="16"/><ellipse cx="350" cy="364" rx="26" ry="16"/>
+          </g>
+          <path d="M20 200 C80 185 120 215 180 200 S300 185 340 205 S400 214 420 206" fill="none" stroke="#B5676A" stroke-width="3" opacity=".55"/>
+          <path d="M20 226 C90 236 150 216 210 228 S330 240 420 226" fill="none" stroke="#8E5A7C" stroke-width="2.5" opacity=".45"/>
+          <g stroke="#6B4A36" stroke-width="1.4" opacity=".55" fill="none">
+            <path d="M330 92 C332 70 338 60 344 52"/><path d="M330 92 C329 130 331 170 334 196"/>
+            <ellipse cx="334" cy="202" rx="6" ry="8" fill="#9B7A60" stroke="none"/>
+          </g>
+          <!-- beams -->
+          <polygon points="126,92 154,92 150,142 130,142" fill="url(#bEr)"/>
+          <ellipse cx="140" cy="140" rx="22" ry="7" fill="#C9BE86" opacity=".55"/>
+          <polygon points="276,92 304,92 300,268 280,268" fill="url(#bNd)"/>
+          <ellipse cx="290" cy="264" rx="26" ry="9" fill="#A94A4A" opacity=".28"/>
+        </g>
+        <!-- handpieces -->
+        <g>
+          <rect x="124" y="30" width="32" height="46" rx="6" fill="#2b2a28"/>
+          <rect x="130" y="76" width="20" height="12" rx="2" fill="#A59C64"/>
+          <rect x="274" y="30" width="32" height="46" rx="6" fill="#2b2a28"/>
+          <rect x="280" y="76" width="20" height="12" rx="2" fill="#8C3B3B"/>
+          <text x="140" y="20" text-anchor="middle" font-size="13" font-weight="600" fill="#222121">Er:YAG</text>
+          <text x="290" y="20" text-anchor="middle" font-size="13" font-weight="600" fill="#222121">Nd:YAG</text>
+        </g>
+        <!-- depth labels -->
+        <g font-size="13" fill="#45423d">
+          <line x1="430" y1="114" x2="446" y2="114" stroke="#A59C64" stroke-width="1.5"/>
+          <text x="452" y="118" data-i18n="diag_epi">Epiderma</text>
+          <line x1="430" y1="194" x2="446" y2="194" stroke="#A59C64" stroke-width="1.5"/>
+          <text x="452" y="198" data-i18n="diag_der">Derma</text>
+          <line x1="430" y1="316" x2="446" y2="316" stroke="#A59C64" stroke-width="1.5"/>
+          <text x="452" y="320" data-i18n="diag_sub">Zemāda</text>
+        </g>
+        <g font-size="12" font-weight="600">
+          <text x="140" y="160" text-anchor="middle" fill="#5d5733">2940 nm</text>
+          <text x="290" y="288" text-anchor="middle" fill="#7a2f2f">1064 nm</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<section class="section stone" id="procedures">
+  <div class="wrap">
+    <div class="procs-head">
+      <h2 class="title" data-i18n="procs_title">Ar ko varam palīdzēt</h2>
+      <p class="lead" data-i18n="procs_lead">Izvēlieties jomu — atvērsies atbilstošā cenrāža sadaļa.</p>
+    </div>
+    <div class="proc-grid">
+      <a href="#prices" class="proc" data-tab="epil" data-tag="epil" data-from="20">
+        <span class="proc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21c0-6 2-9 2-13M12 21c0-7 1-10 3-15M17 21c0-5-1-8-3-11"/></svg></span>
+        <h3 data-i18n="pc_epil_t">Lāzerepilācija</h3>
+        <p data-i18n="pc_epil_p">Seja, ķermenis un bikini zona sievietēm un vīriešiem.</p>
+        <span class="proc-foot"><span class="proc-from"></span><span class="proc-more" data-i18n="pc_more">Skatīt cenas</span></span>
+      </a>
+      <a href="#prices" class="proc" data-tab="lift" data-tag="lift" data-from="60">
+        <span class="proc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c-1.5-2.5-2-5-2-8a8 8 0 0 1 16 0c0 3-.5 5.5-2 8"/><path d="M12 15V7M9 10l3-3 3 3"/></svg></span>
+        <h3 data-i18n="pc_lift_t">Liftings bez injekcijām</h3>
+        <p data-i18n="pc_lift_p">Fotona 4D, Tensor Tight, VectorLift, Smooth Eye un LipLase.</p>
+        <span class="proc-foot"><span class="proc-from"></span><span class="proc-more" data-i18n="pc_more">Skatīt cenas</span></span>
+      </a>
+      <a href="#prices" class="proc" data-tab="resurf" data-tag="resurf" data-from="50">
+        <span class="proc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg></span>
+        <h3 data-i18n="pc_resurf_t">Ādas atjaunošana</h3>
+        <p data-i18n="pc_resurf_p">SuperFacialPeel un SMOOTH režīms sejai, kaklam un dekoltē.</p>
+        <span class="proc-foot"><span class="proc-from"></span><span class="proc-more" data-i18n="pc_more">Skatīt cenas</span></span>
+      </a>
+      <a href="#prices" class="proc" data-tab="therapy" data-tag="vessels" data-from="25">
+        <span class="proc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c4 0 5-3 9-3s5 3 9 3M12 9c0-3 2-5 4-6M12 9c-1 4 1 8-1 12M8 12c-1 3-3 4-5 5M16 12c1 3 3 5 5 5"/></svg></span>
+        <h3 data-i18n="pc_vessels_t">Asinsvadi un rozācija</h3>
+        <p data-i18n="pc_vessels_p">Asinsvadu tīklojums, “zvaigznītes”, hemangiomas un apsārtums.</p>
+        <span class="proc-foot"><span class="proc-from"></span><span class="proc-more" data-i18n="pc_more">Skatīt cenas</span></span>
+      </a>
+      <a href="#prices" class="proc" data-tab="therapy" data-tag="acne" data-from="40">
+        <span class="proc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1.2"/><circle cx="14.5" cy="8.5" r=".9"/><circle cx="15" cy="14" r="1.4"/><circle cx="9.5" cy="15" r=".8"/></svg></span>
+        <h3 data-i18n="pc_acne_t">Akne un rētas</h3>
+        <p data-i18n="pc_acne_p">Aktīvas aknes ārstēšana, postakne un rētu izlīdzināšana.</p>
+        <span class="proc-foot"><span class="proc-from"></span><span class="proc-more" data-i18n="pc_more">Skatīt cenas</span></span>
+      </a>
+      <a href="#prices" class="proc" data-tab="surg" data-tag="surg" data-from="25">
+        <span class="proc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4 9 15l-3 1 1-3L18 2z"/><path d="M4 20c2-2 3-2 5-1"/></svg></span>
+        <h3 data-i18n="pc_surg_t">Lāzerķirurģija</h3>
+        <p data-i18n="pc_surg_p">Labdabīgu ādas veidojumu un papilomu noņemšana.</p>
+        <span class="proc-foot"><span class="proc-from"></span><span class="proc-more" data-i18n="pc_more">Skatīt cenas</span></span>
+      </a>
+      <a href="#prices" class="proc" data-tab="therapy" data-tag="nails" data-from="20">
+        <span class="proc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21V9a4 4 0 0 1 8 0v12"/><path d="M9.5 9.5a2.5 2.5 0 0 1 5 0V13h-5z"/></svg></span>
+        <h3 data-i18n="pc_nails_t">Nagu sēnīte un kārpas</h3>
+        <p data-i18n="pc_nails_p">Lāzerapstrāde, cena par katru nagu vai kārpu.</p>
+        <span class="proc-foot"><span class="proc-from"></span><span class="proc-more" data-i18n="pc_more">Skatīt cenas</span></span>
+      </a>
+      <a href="#prices" class="proc" data-tab="therapy" data-tag="hair" data-from="80" data-fixed="1">
+        <span class="proc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20c0-8 3-14 7-16 4 2 7 8 7 16"/><path d="M9 20c0-5 1-9 3-11 2 2 3 6 3 11"/></svg></span>
+        <h3>Hair Restart</h3>
+        <p data-i18n="pc_hair_p">Neinvazīva matu augšanas stimulācija ar lāzeru.</p>
+        <span class="proc-foot"><span class="proc-from"></span><span class="proc-more" data-i18n="pc_more">Skatīt cenas</span></span>
+      </a>
+      <a href="#prices" class="proc" data-tab="venus" data-tag="venus" data-from="30">
+        <span class="proc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3c0 4 1 6 1 9s-2 5-2 9M16 3c0 4-1 6-1 9s2 5 2 9"/><path d="M9.5 12h5"/></svg></span>
+        <h3>Venus Legacy</h3>
+        <p data-i18n="pc_venus_p">Ādas savilkšana, celulīts un ķermeņa kontūras.</p>
+        <span class="proc-foot"><span class="proc-from"></span><span class="proc-more" data-i18n="pc_more">Skatīt cenas</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section derma" id="derma">
+  <div class="wrap derma-grid">
+    <div class="doc stone">
+      <div class="doc-mark" aria-hidden="true">IM</div>
+      <span class="doc-role" data-i18n="derma_role">Dermatoloģe</span>
+      <h3 data-i18n="derma_name">Dr. Ina Maksimova</h3>
+      <p class="doc-note" data-i18n="derma_note">Pieņem SP Lāzerklīnikā Rēzeknē. Pierakstu pieņemam pa tālruni.</p>
+    </div>
+    <div>
+      <h2 class="title" data-i18n="derma_title">Dermatologa konsultācijas</h2>
+      <p class="lead" data-i18n="derma_lead">Pirms lāzerprocedūras vai atsevišķi — ārste izvērtē ādu, dzimumzīmes un veidojumus un iesaka piemērotāko ārstēšanu.</p>
+      <div class="dlist">
+        <div class="ditem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H6a2 2 0 0 0-2 2v4a5 5 0 0 0 10 0V5a2 2 0 0 0-2-2h-2"/><path d="M9 14v2a5 5 0 0 0 10 0v-2"/><circle cx="19" cy="12" r="2"/></svg>
+          <div><h4 data-i18n="d1_t">Dermatologa konsultācija</h4><p data-i18n="d1_p">Ādas problēmu izvērtēšana un ārstēšanas plāns.</p></div>
+        </div>
+        <div class="ditem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m20 20-5.5-5.5"/><circle cx="10" cy="10" r="1.6"/></svg>
+          <div><h4 data-i18n="d2_t">Dermatoskopija</h4><p data-i18n="d2_p">Dzimumzīmju izmeklēšana ar palielinājumu, lai laikus pamanītu izmaiņas.</p></div>
+        </div>
+        <div class="ditem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.5 6.5l15 11M19.5 6.5l-15 11M9 3.5l3 2 3-2M9 20.5l3-2 3 2"/></svg>
+          <div><h4 data-i18n="d3_t">Kriodestrukcija</h4><p data-i18n="d3_p">Labdabīgu ādas veidojumu noņemšana ar aukstumu.</p></div>
+        </div>
+      </div>
+      <div class="derma-cta">
+        <a href="tel:+37125425412" class="btn btn-ink"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="derma_cta">Pierakstīties pie dermatologa</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section stone" id="prices">
+  <div class="wrap">
+    <h2 class="title" data-i18n="prices_title">Cenrādis</h2>
+    <p class="lead" data-i18n="prices_lead">Cenas norādītas eiro. Precīzu cenu nosaka konsultācijā, jo tā atkarīga no zonas un ādas stāvokļa.</p>
+    <div class="price-bar">
+      <div class="tabs" role="tablist" id="tabs" aria-label="Cenrāža sadaļas"></div>
+      <label class="search">
+        <span class="sr" data-i18n="search_label">Meklēt cenrādī</span>
+        <svg aria-hidden="true"><use href="#i-search"/></svg>
+        <input type="search" id="priceSearch" autocomplete="off" data-i18n-ph="search_ph" placeholder="Meklēt procedūru…">
+      </label>
+    </div>
+    <div class="price-panel" id="pricePanel" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="section visit" id="visit">
+  <div class="wrap">
+    <h2 class="title" data-i18n="visit_title">Kā notiek vizīte</h2>
+    <div class="steps">
+      <div class="step"><span class="step-num">1</span><h3 data-i18n="v1_t">Pieraksts</h3><p data-i18n="v1_p">Zvaniet, rakstiet e-pastu vai Instagram — vienosimies par laiku.</p></div>
+      <div class="step"><span class="step-num">2</span><h3 data-i18n="v2_t">Konsultācija</h3><p data-i18n="v2_p">Izvērtējam ādu, izvēlamies procedūru un nosaucam cenu.</p></div>
+      <div class="step"><span class="step-num">3</span><h3 data-i18n="v3_t">Procedūra</h3><p data-i18n="v3_p">Procedūru veic speciālists ar Fotona SP Dynamis. Ilgums atkarīgs no zonas.</p></div>
+      <div class="step"><span class="step-num">4</span><h3 data-i18n="v4_t">Aprūpe pēc tam</h3><p data-i18n="v4_p">Saņemat ieteikumus ādas kopšanai un, ja vajag, nākamās vizītes laiku.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section stone" id="contact">
+  <div class="wrap">
+    <h2 class="title" data-i18n="contact_title">Kontakti</h2>
+    <div class="contact-grid">
+      <div class="cinfo">
+        <div class="cline"><svg aria-hidden="true"><use href="#i-pin"/></svg>
+          <div><div class="k" data-i18n="c_addr_k">Adrese</div><a class="v" href="https://www.google.com/maps/search/?api=1&query=Atbr%C4%ABvo%C5%A1anas+aleja+98,+R%C4%93zekne,+LV-4601" target="_blank" rel="noopener">Atbrīvošanas aleja 98, Rēzekne, <span style="white-space:nowrap">LV-4601</span></a></div></div>
+        <div class="cline"><svg aria-hidden="true"><use href="#i-phone"/></svg>
+          <div><div class="k" data-i18n="c_tel_k">Tālrunis</div><a class="v" href="tel:+37125425412">+371 25 425 412</a></div></div>
+        <div class="cline"><svg aria-hidden="true"><use href="#i-mail"/></svg>
+          <div><div class="k" data-i18n="c_mail_k">E-pasts</div><a class="v" href="mailto:sp.lazerklinika@gmail.com">sp.lazerklinika@gmail.com</a></div></div>
+        <div class="cline"><svg aria-hidden="true"><use href="#i-clock"/></svg>
+          <div><div class="k" data-i18n="c_hours_k">Pieņemšana</div><div class="v" data-i18n="c_hours_v">Pēc iepriekšēja pieraksta</div></div></div>
+        <div class="socials">
+          <a class="soc" href="https://www.instagram.com/sp.lazerklinika" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>sp.lazerklinika</a>
+          <a class="soc" href="https://www.facebook.com/p/SIA-SP-L%C4%81zerkl%C4%ABnika-61555151227859/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg>SIA SP Lāzerklīnika</a>
+        </div>
+        <div class="map">
+          <iframe title="SP Lāzerklīnika — karte" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Atbr%C4%ABvo%C5%A1anas+aleja+98,+R%C4%93zekne,+LV-4601&z=16&output=embed"></iframe>
+        </div>
+      </div>
+
+      <form class="form" id="contactForm" novalidate>
+        <h3 data-i18n="f_title">Pieteikties vizītei</h3>
+        <div class="frow">
+          <div class="field"><label for="cf-name" data-i18n="f_name">Vārds *</label><input id="cf-name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="cf-phone" data-i18n="f_phone">Tālrunis *</label><input id="cf-phone" name="phone" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="cf-email" data-i18n="f_email">E-pasts</label><input id="cf-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="cf-proc" data-i18n="f_proc">Procedūra</label><select id="cf-proc" name="proc"></select></div>
+        <div class="field"><label for="cf-msg" data-i18n="f_msg">Ziņa</label><textarea id="cf-msg" name="message"></textarea></div>
+        <button type="submit" class="btn btn-gold" style="width:100%" data-i18n="f_send">Nosūtīt pieteikumu</button>
+        <p class="form-note" data-i18n="f_note">Pēc nospiešanas atvērsies jūsu e-pasta programma ar sagatavotu vēstuli.</p>
+        <div class="form-ok" id="formOk" role="status" data-i18n="f_ok">Vēstule sagatavota — pabeidziet sūtīšanu e-pasta logā.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <img src="logo.svg" alt="SP Lāzerklīnika" class="footer-logo" width="84" height="84">
+        <p data-i18n="foot_about">Lāzerklīnika Rēzeknē ar Fotona SP Dynamis. Lāzerepilācija, ādas atjaunošana, liftings un dermatologa konsultācijas.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot_nav">Sadaļas</h4>
+        <ul>
+          <li><a href="#procedures" data-i18n="nav_procs">Procedūras</a></li>
+          <li><a href="#derma" data-i18n="nav_derma">Dermatologs</a></li>
+          <li><a href="#prices" data-i18n="nav_prices">Cenrādis</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Kontakti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="foot_contact">Kontakti</h4>
+        <ul>
+          <li><a href="tel:+37125425412">+371 25 425 412</a></li>
+          <li><a href="mailto:sp.lazerklinika@gmail.com">sp.lazerklinika@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/sp.lazerklinika" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/p/SIA-SP-L%C4%81zerkl%C4%ABnika-61555151227859/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> SIA “SP Lāzerklīnika”. <span data-i18n="foot_reg">Reģ. nr. 40203510972. Ārstniecības iestādes kods 006000009.</span></span>
+      <span>Atbrīvošanas aleja 98, Rēzekne, LV-4601</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+37125425412" class="fab" aria-label="Zvanīt +371 25 425 412" data-i18n-aria="fab"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+
+<script>
+/* ---------- price data ----------
+   [tab, tag, group, lv, ru, en, min, max, isFrom] */
+const GROUPS = {
+  sfp:   {lv:'SuperFacialPeel lāzerpīlings (pulēšana, slīpēšana)', ru:'Лазерный пилинг SuperFacialPeel (полировка, шлифовка)', en:'SuperFacialPeel laser peel (polishing, resurfacing)'},
+  smooth:{lv:'Virspusēja ekspress ādas atjaunošana (SMOOTH režīms)', ru:'Поверхностное экспресс-обновление кожи (режим SMOOTH)', en:'Superficial express resurfacing (SMOOTH mode)'},
+  prog:  {lv:'Liftinga programmas', ru:'Программы лифтинга', en:'Lifting programmes'},
+  frac:  {lv:'Dziļais ādas liftings (Frac Nd režīms)', ru:'Глубокий лифтинг кожи (режим Frac Nd)', en:'Deep skin lifting (Frac Nd mode)'},
+  bik:   {lv:'Bikini zona un rokas', ru:'Зона бикини и руки', en:'Bikini area and arms'},
+  face:  {lv:'Seja', ru:'Лицо', en:'Face'},
+  back:  {lv:'Mugura', ru:'Спина', en:'Back'},
+  chest: {lv:'Krūtis', ru:'Грудь', en:'Chest'},
+  venus: {lv:'Zonas un procedūras ilgums', ru:'Зоны и длительность процедуры', en:'Areas and session length'}
+};
+const PRICES = [
+  ['surg','surg',null,'Labdabīga ādas veidojuma noņemšana','Удаление доброкачественного образования кожи','Removal of a benign skin lesion',25,null,1],
+  ['surg','surg',null,'Labdabīga ādas veidojuma noņemšana uz sejas','Удаление доброкачественного образования на лице','Removal of a benign lesion on the face',30,null,1],
+  ['surg','surg',null,'Papilomu noņemšana kakla zonā|multiplas','Удаление папиллом в области шеи|множественные','Papilloma removal, neck|multiple',70,null,1],
+  ['surg','surg',null,'Papilomu noņemšana kakla zonā un padusēs|multiplas','Удаление папиллом на шее и в подмышках|множественные','Papilloma removal, neck and underarms|multiple',100,null,1],
+
+  ['therapy','acne',null,'Rētas izlīdzināšana','Выравнивание рубца','Scar smoothing',50,null,1],
+  ['therapy','nails',null,'Kārpu apstrāde','Лечение бородавок','Wart treatment',20,null,0],
+  ['therapy','acne',null,'Aknes ārstēšanas procedūra|seja','Лечение акне|лицо','Acne treatment|face',40,60,0],
+  ['therapy','acne',null,'Aknes ārstēšanas procedūra|mugura','Лечение акне|спина','Acne treatment|back',60,80,0],
+  ['therapy','nails',null,'Nagu sēnītes ārstēšana|1 nags','Лечение грибка ногтей|1 ноготь','Nail fungus treatment|1 nail',20,null,0],
+  ['therapy','nails',null,'Katrs nākamais nags','Каждый следующий ноготь','Each additional nail',5,null,0],
+  ['therapy','vessels',null,'Asinsvadu tīklojuma likvidēšana uz sejas|cena atkarīga no asinsvadu daudzuma','Удаление сосудистой сетки на лице|цена зависит от количества сосудов','Facial thread vein removal|price depends on the number of vessels',50,150,0],
+  ['therapy','vessels',null,'Asinsvadu tīklojuma likvidēšana uz kājām|katra 10 × 10 cm zona','Удаление сосудистой сетки на ногах|каждая зона 10 × 10 см','Leg thread vein removal|per 10 × 10 cm area',40,null,0],
+  ['therapy','vessels',null,'Asinsvadu “zvaigznīšu” jeb hemangiomu likvidēšana','Удаление сосудистых «звёздочек» (гемангиом)','Spider vein (haemangioma) removal',25,null,0],
+  ['therapy','vessels',null,'Kavernozās hemangiomas likvidēšana','Удаление кавернозной гемангиомы','Cavernous haemangioma removal',30,40,0],
+  ['therapy','acne',null,'Postakne ārstēšana|apsārtumi un pūtīšu rētas','Лечение постакне|покраснения и рубцы','Post-acne treatment|redness and acne scars',80,null,1],
+  ['therapy','vessels',null,'Rozācijas ārstēšana','Лечение розацеа','Rosacea treatment',60,100,0],
+  ['therapy','hair',null,'Hair Restart|neinvazīva matu augšanas stimulācija ar lāzeru','Hair Restart|неинвазивная лазерная стимуляция роста волос','Hair Restart|non-invasive laser hair growth stimulation',80,null,0],
+
+  ['resurf','resurf','sfp','Dekoltē zona','Зона декольте','Décolleté',80,null,0],
+  ['resurf','resurf','sfp','Seja + kakls','Лицо + шея','Face + neck',120,null,0],
+  ['resurf','resurf','sfp','Seja + kakls + dekoltē','Лицо + шея + декольте','Face + neck + décolleté',150,null,0],
+  ['resurf','resurf','smooth','Seja','Лицо','Face',100,null,0],
+  ['resurf','resurf','smooth','Kakls','Шея','Neck',50,null,0],
+  ['resurf','resurf','smooth','Dekoltē zona','Зона декольте','Décolleté',80,null,0],
+  ['resurf','resurf','smooth','Seja + kakls','Лицо + шея','Face + neck',120,null,0],
+  ['resurf','resurf','smooth','Seja + kakls + dekoltē zona','Лицо + шея + декольте','Face + neck + décolleté',150,null,0],
+
+  ['lift','lift','prog','Fotona 4D sejas liftings','Лифтинг лица Fotona 4D','Fotona 4D facial lifting',300,null,0],
+  ['lift','lift','prog','Ādas savilkšana Tensor Tight','Подтяжка кожи Tensor Tight','Tensor Tight skin tightening',60,null,1],
+  ['lift','lift','prog','Twin Light ādas atjaunošana','Обновление кожи Twin Light','Twin Light skin rejuvenation',300,null,0],
+  ['lift','lift','prog','LipLase|perorālās ādas atjaunošana un lūpu apjoma palielināšana','LipLase|обновление кожи вокруг рта и увеличение объёма губ','LipLase|perioral rejuvenation and lip volume',80,null,0],
+  ['lift','lift','prog','VectorLift|uzacu, pieres un augšējo plakstiņu zonas liftings','VectorLift|лифтинг бровей, лба и верхних век','VectorLift|brow, forehead and upper eyelid lifting',80,null,0],
+  ['lift','lift','prog','Smooth Eye|acu zonas liftings','Smooth Eye|лифтинг зоны вокруг глаз','Smooth Eye|eye area lifting',80,null,0],
+  ['lift','lift','frac','Seja','Лицо','Face',60,null,0],
+  ['lift','lift','frac','Seja + kakls','Лицо + шея','Face + neck',70,null,0],
+  ['lift','lift','frac','Seja + kakls + dekoltē zona','Лицо + шея + декольте','Face + neck + décolleté',90,null,0],
+
+  ['epil','epil','bik','Bikini – pilna + sēžas intīmā zona','Бикини – глубокое + межъягодичная зона','Full bikini + intergluteal area',70,null,0],
+  ['epil','epil','bik','Bikini vīriešiem – priekšpuse','Бикини для мужчин – передняя часть','Men’s bikini – front',55,null,0],
+  ['epil','epil','bik','Bikini vīriešiem – pilna','Бикини для мужчин – полностью','Men’s bikini – full',75,null,0],
+  ['epil','epil','bik','Bikini vīriešiem – priekšpuse + sēžas intīmā zona','Бикини для мужчин – передняя часть + межъягодичная зона','Men’s bikini – front + intergluteal area',100,null,0],
+  ['epil','epil','bik','Roka visā garumā|vienai rokai','Рука полностью|одна рука','Full arm|one arm',60,null,0],
+  ['epil','epil','face','Augšlūpa','Верхняя губа','Upper lip',20,null,0],
+  ['epil','epil','face','Zods','Подбородок','Chin',25,null,0],
+  ['epil','epil','face','Piere','Лоб','Forehead',20,null,0],
+  ['epil','epil','face','Bakenes','Бакенбарды','Sideburns',30,null,0],
+  ['epil','epil','face','Kakls – sievietēm','Шея – для женщин','Neck – women',30,null,0],
+  ['epil','epil','face','Kakls – vīriešiem','Шея – для мужчин','Neck – men',45,null,0],
+  ['epil','epil','face','Vaigi','Щёки','Cheeks',35,null,0],
+  ['epil','epil','face','Žokļa līnija','Линия челюсти','Jawline',45,null,0],
+  ['epil','epil','back','Pleci','Плечи','Shoulders',70,null,0],
+  ['epil','epil','back','Mugura – krustu daļa','Спина – поясница','Lower back',50,null,0],
+  ['epil','epil','back','Mugura – visa','Спина – полностью','Full back',120,null,0],
+  ['epil','epil','chest','Sieviešu dekoltē','Декольте (женщины)','Women’s décolleté',40,null,0],
+  ['epil','epil','chest','Krūšu gali','Ареолы','Areolas',35,null,0],
+
+  ['venus','venus','venus','Kājas aizmugurē|35 min','Задняя поверхность ног|35 мин','Back of legs|35 min',30,null,0],
+  ['venus','venus','venus','Visas kājas|1 h 10 min','Ноги полностью|1 ч 10 мин','Full legs|1 h 10 min',50,null,0],
+  ['venus','venus','venus','Kājas + dibens|1 h 30 min','Ноги + ягодицы|1 ч 30 мин','Legs + buttocks|1 h 30 min',60,null,0],
+  ['venus','venus','venus','Kājas + vēders|1 h 30 min','Ноги + живот|1 ч 30 мин','Legs + abdomen|1 h 30 min',60,null,0],
+  ['venus','venus','venus','Kājas + dibens + vēders|2 h','Ноги + ягодицы + живот|2 ч','Legs + buttocks + abdomen|2 h',70,null,0],
+  ['venus','venus','venus','Rokas|35 min','Руки|35 мин','Arms|35 min',30,null,0],
+  ['venus','venus','venus','Seja|30 min','Лицо|30 мин','Face|30 min',30,null,0],
+  ['venus','venus','venus','Seja + kakls|35 min','Лицо + шея|35 мин','Face + neck|35 min',40,null,0],
+  ['venus','venus','venus','Seja + kakls + dekoltē|50 min','Лицо + шея + декольте|50 мин','Face + neck + décolleté|50 min',50,null,0]
+];
+const TABS = ['epil','lift','resurf','therapy','surg','venus'];
+const LANGS = ['lv','ru','en'];
+
+const I18N = {
+lv:{
+  nav_about:"Klīnika",nav_procs:"Procedūras",nav_derma:"Dermatologs",nav_prices:"Cenrādis",nav_visit:"Vizīte",nav_contact:"Kontakti",
+  hero_kicker:"Ārstniecības iestāde Rēzeknē",
+  hero_h1:"Vienīgā lāzerklīnika Latgalē ar Fotona SP Dynamis",
+  hero_sub:"Lāzerepilācija, ādas atjaunošana, liftings bez injekcijām un dermatologa konsultācijas Atbrīvošanas alejā 98.",
+  hero_cta1:"Pieteikties pa tālruni",hero_cta2:"Skatīt cenrādi",
+  hs1_p:"Divi lāzeri vienā iekārtā — virspusējai un dziļai iedarbībai.",
+  hs2_t:"Ārstniecības iestāde",hs2_p:"Ārstniecības iestādes kods 006000009.",
+  hs3_t:"Dermatologs klīnikā",hs3_p:"Dr. Ina Maksimova — konsultācijas un dermatoskopija.",
+  tech_title:"Viena iekārta, divi lāzeri",
+  tech_lead:"Fotona SP Dynamis apvieno divus viļņu garumus. Tāpēc vienā klīnikā var ārstēt gan ādas virsmu, gan dziļākos slāņus — no pūtīšu rētām līdz asinsvadiem un liftingam.",
+  tech_er:"Strādā ādas virskārtā: pīlingi, ādas atjaunošana, rētu izlīdzināšana, veidojumu noņemšana.",
+  tech_nd:"Sniedzas dziļāk: asinsvadi un rozācija, ādas savilkšana, epilācija, nagu sēnīte.",
+  tech_cta:"Apskatīt procedūras",
+  diag_epi:"Epiderma",diag_der:"Derma",diag_sub:"Zemāda",
+  procs_title:"Ar ko varam palīdzēt",procs_lead:"Izvēlieties jomu — atvērsies atbilstošā cenrāža sadaļa.",
+  pc_epil_t:"Lāzerepilācija",pc_epil_p:"Seja, ķermenis un bikini zona sievietēm un vīriešiem.",
+  pc_lift_t:"Liftings bez injekcijām",pc_lift_p:"Fotona 4D, Tensor Tight, VectorLift, Smooth Eye un LipLase.",
+  pc_resurf_t:"Ādas atjaunošana",pc_resurf_p:"SuperFacialPeel un SMOOTH režīms sejai, kaklam un dekoltē.",
+  pc_vessels_t:"Asinsvadi un rozācija",pc_vessels_p:"Asinsvadu tīklojums, “zvaigznītes”, hemangiomas un apsārtums.",
+  pc_acne_t:"Akne un rētas",pc_acne_p:"Aktīvas aknes ārstēšana, postakne un rētu izlīdzināšana.",
+  pc_surg_t:"Lāzerķirurģija",pc_surg_p:"Labdabīgu ādas veidojumu un papilomu noņemšana.",
+  pc_nails_t:"Nagu sēnīte un kārpas",pc_nails_p:"Lāzerapstrāde, cena par katru nagu vai kārpu.",
+  pc_hair_p:"Neinvazīva matu augšanas stimulācija ar lāzeru.",
+  pc_venus_p:"Ādas savilkšana, celulīts un ķermeņa kontūras.",
+  pc_more:"Skatīt cenas",
+  derma_role:"Dermatoloģe",derma_name:"Dr. Ina Maksimova",
+  derma_note:"Pieņem SP Lāzerklīnikā Rēzeknē. Pierakstu pieņemam pa tālruni.",
+  derma_title:"Dermatologa konsultācijas",
+  derma_lead:"Pirms lāzerprocedūras vai atsevišķi — ārste izvērtē ādu, dzimumzīmes un veidojumus un iesaka piemērotāko ārstēšanu.",
+  d1_t:"Dermatologa konsultācija",d1_p:"Ādas problēmu izvērtēšana un ārstēšanas plāns.",
+  d2_t:"Dermatoskopija",d2_p:"Dzimumzīmju izmeklēšana ar palielinājumu, lai laikus pamanītu izmaiņas.",
+  d3_t:"Kriodestrukcija",d3_p:"Labdabīgu ādas veidojumu noņemšana ar aukstumu.",
+  derma_cta:"Pierakstīties pie dermatologa",
+  prices_title:"Cenrādis",
+  prices_lead:"Cenas norādītas eiro. Precīzu cenu nosaka konsultācijā, jo tā atkarīga no zonas un ādas stāvokļa.",
+  search_label:"Meklēt cenrādī",search_ph:"Meklēt procedūru…",
+  t_surg:"Lāzerķirurģija",t_therapy:"Lāzerterapija",t_resurf:"Ādas atjaunošana",t_lift:"Liftings",t_epil:"Epilācija",t_venus:"Venus Legacy",
+  empty:"Nekas netika atrasts. Pamēģiniet citu vārdu vai zvaniet",
+  epil_note:"Paduses, kājas un citas zonas — cenu precizējiet pa tālruni.",
+  results:"Meklēšanas rezultāti",
+  visit_title:"Kā notiek vizīte",
+  v1_t:"Pieraksts",v1_p:"Zvaniet, rakstiet e-pastu vai Instagram — vienosimies par laiku.",
+  v2_t:"Konsultācija",v2_p:"Izvērtējam ādu, izvēlamies procedūru un nosaucam cenu.",
+  v3_t:"Procedūra",v3_p:"Procedūru veic speciālists ar Fotona SP Dynamis. Ilgums atkarīgs no zonas.",
+  v4_t:"Aprūpe pēc tam",v4_p:"Saņemat ieteikumus ādas kopšanai un, ja vajag, nākamās vizītes laiku.",
+  contact_title:"Kontakti",
+  c_addr_k:"Adrese",c_tel_k:"Tālrunis",c_mail_k:"E-pasts",c_hours_k:"Pieņemšana",c_hours_v:"Pēc iepriekšēja pieraksta",
+  f_title:"Pieteikties vizītei",f_name:"Vārds *",f_phone:"Tālrunis *",f_email:"E-pasts",f_proc:"Procedūra",f_msg:"Ziņa",
+  f_any:"Vēl nezinu — vajag konsultāciju",f_derma:"Dermatologa konsultācija",
+  f_send:"Nosūtīt pieteikumu",
+  f_note:"Pēc nospiešanas atvērsies jūsu e-pasta programma ar sagatavotu vēstuli.",
+  f_ok:"Vēstule sagatavota — pabeidziet sūtīšanu e-pasta logā.",
+  f_subject:"Pieteikums vizītei",f_l_name:"Vārds",f_l_phone:"Tālrunis",f_l_email:"E-pasts",f_l_proc:"Procedūra",
+  foot_about:"Lāzerklīnika Rēzeknē ar Fotona SP Dynamis. Lāzerepilācija, ādas atjaunošana, liftings un dermatologa konsultācijas.",
+  foot_nav:"Sadaļas",foot_contact:"Kontakti",
+  foot_reg:"Reģ. nr. 40203510972. Ārstniecības iestādes kods 006000009.",
+  fab:"Zvanīt +371 25 425 412",
+  from:"no"
+},
+ru:{
+  nav_about:"Клиника",nav_procs:"Процедуры",nav_derma:"Дерматолог",nav_prices:"Цены",nav_visit:"Визит",nav_contact:"Контакты",
+  hero_kicker:"Медицинское учреждение в Резекне",
+  hero_h1:"Единственная в Латгалии лазерная клиника с Fotona SP Dynamis",
+  hero_sub:"Лазерная эпиляция, обновление кожи, лифтинг без инъекций и консультации дерматолога на Атбривошанас аллее, 98.",
+  hero_cta1:"Записаться по телефону",hero_cta2:"Смотреть цены",
+  hs1_p:"Два лазера в одном аппарате — для поверхностного и глубокого воздействия.",
+  hs2_t:"Медицинское учреждение",hs2_p:"Код медицинского учреждения 006000009.",
+  hs3_t:"Дерматолог в клинике",hs3_p:"Д-р Ина Максимова — консультации и дерматоскопия.",
+  tech_title:"Один аппарат, два лазера",
+  tech_lead:"Fotona SP Dynamis объединяет две длины волны. Поэтому в одной клинике можно работать и с поверхностью кожи, и с глубокими слоями — от рубцов постакне до сосудов и лифтинга.",
+  tech_er:"Работает в верхнем слое кожи: пилинги, обновление кожи, выравнивание рубцов, удаление образований.",
+  tech_nd:"Проникает глубже: сосуды и розацеа, подтяжка кожи, эпиляция, грибок ногтей.",
+  tech_cta:"Смотреть процедуры",
+  diag_epi:"Эпидермис",diag_der:"Дерма",diag_sub:"Гиподерма",
+  procs_title:"С чем мы поможем",procs_lead:"Выберите направление — откроется нужный раздел прайса.",
+  pc_epil_t:"Лазерная эпиляция",pc_epil_p:"Лицо, тело и зона бикини для женщин и мужчин.",
+  pc_lift_t:"Лифтинг без инъекций",pc_lift_p:"Fotona 4D, Tensor Tight, VectorLift, Smooth Eye и LipLase.",
+  pc_resurf_t:"Обновление кожи",pc_resurf_p:"SuperFacialPeel и режим SMOOTH для лица, шеи и декольте.",
+  pc_vessels_t:"Сосуды и розацеа",pc_vessels_p:"Сосудистая сетка, «звёздочки», гемангиомы и покраснения.",
+  pc_acne_t:"Акне и рубцы",pc_acne_p:"Лечение активного акне, постакне и выравнивание рубцов.",
+  pc_surg_t:"Лазерная хирургия",pc_surg_p:"Удаление доброкачественных образований кожи и папиллом.",
+  pc_nails_t:"Грибок ногтей и бородавки",pc_nails_p:"Лазерная обработка, цена за каждый ноготь или бородавку.",
+  pc_hair_p:"Неинвазивная лазерная стимуляция роста волос.",
+  pc_venus_p:"Подтяжка кожи, целлюлит и контуры тела.",
+  pc_more:"Смотреть цены",
+  derma_role:"Врач-дерматолог",derma_name:"Д-р Ина Максимова",
+  derma_note:"Принимает в SP Lāzerklīnika в Резекне. Запись по телефону.",
+  derma_title:"Консультации дерматолога",
+  derma_lead:"Перед лазерной процедурой или отдельно — врач оценит кожу, родинки и образования и подберёт подходящее лечение.",
+  d1_t:"Консультация дерматолога",d1_p:"Оценка проблем кожи и план лечения.",
+  d2_t:"Дерматоскопия",d2_p:"Осмотр родинок с увеличением, чтобы вовремя заметить изменения.",
+  d3_t:"Криодеструкция",d3_p:"Удаление доброкачественных образований холодом.",
+  derma_cta:"Записаться к дерматологу",
+  prices_title:"Цены",
+  prices_lead:"Цены указаны в евро. Точную стоимость определяют на консультации — она зависит от зоны и состояния кожи.",
+  search_label:"Поиск по прайсу",search_ph:"Найти процедуру…",
+  t_surg:"Лазерная хирургия",t_therapy:"Лазерная терапия",t_resurf:"Обновление кожи",t_lift:"Лифтинг",t_epil:"Эпиляция",t_venus:"Venus Legacy",
+  empty:"Ничего не найдено. Попробуйте другое слово или позвоните",
+  epil_note:"Подмышки, ноги и другие зоны — уточняйте цену по телефону.",
+  results:"Результаты поиска",
+  visit_title:"Как проходит визит",
+  v1_t:"Запись",v1_p:"Позвоните, напишите на e-mail или в Instagram — согласуем время.",
+  v2_t:"Консультация",v2_p:"Оцениваем кожу, подбираем процедуру и называем цену.",
+  v3_t:"Процедура",v3_p:"Процедуру проводит специалист на Fotona SP Dynamis. Длительность зависит от зоны.",
+  v4_t:"Уход после",v4_p:"Вы получаете рекомендации по уходу и, при необходимости, время следующего визита.",
+  contact_title:"Контакты",
+  c_addr_k:"Адрес",c_tel_k:"Телефон",c_mail_k:"E-mail",c_hours_k:"Приём",c_hours_v:"По предварительной записи",
+  f_title:"Записаться на приём",f_name:"Имя *",f_phone:"Телефон *",f_email:"E-mail",f_proc:"Процедура",f_msg:"Сообщение",
+  f_any:"Пока не знаю — нужна консультация",f_derma:"Консультация дерматолога",
+  f_send:"Отправить заявку",
+  f_note:"После нажатия откроется ваша почтовая программа с готовым письмом.",
+  f_ok:"Письмо подготовлено — завершите отправку в окне почты.",
+  f_subject:"Заявка на приём",f_l_name:"Имя",f_l_phone:"Телефон",f_l_email:"E-mail",f_l_proc:"Процедура",
+  foot_about:"Лазерная клиника в Резекне с Fotona SP Dynamis. Лазерная эпиляция, обновление кожи, лифтинг и консультации дерматолога.",
+  foot_nav:"Разделы",foot_contact:"Контакты",
+  foot_reg:"Рег. № 40203510972. Код медицинского учреждения 006000009.",
+  fab:"Позвонить +371 25 425 412",
+  from:"от"
+},
+en:{
+  nav_about:"Clinic",nav_procs:"Treatments",nav_derma:"Dermatologist",nav_prices:"Prices",nav_visit:"Your visit",nav_contact:"Contact",
+  hero_kicker:"Registered medical clinic in Rēzekne",
+  hero_h1:"The only laser clinic in Latgale with Fotona SP Dynamis",
+  hero_sub:"Laser hair removal, skin resurfacing, needle-free lifting and dermatologist consultations at Atbrīvošanas aleja 98.",
+  hero_cta1:"Book by phone",hero_cta2:"See prices",
+  hs1_p:"Two lasers in one system — for surface and deep treatment.",
+  hs2_t:"Medical institution",hs2_p:"Medical institution code 006000009.",
+  hs3_t:"Dermatologist on site",hs3_p:"Dr Ina Maksimova — consultations and dermatoscopy.",
+  tech_title:"One system, two lasers",
+  tech_lead:"Fotona SP Dynamis combines two wavelengths, so one clinic can treat both the skin surface and deeper layers — from acne scars to veins and lifting.",
+  tech_er:"Works in the upper layer of the skin: peels, resurfacing, scar smoothing, lesion removal.",
+  tech_nd:"Reaches deeper: veins and rosacea, skin tightening, hair removal, nail fungus.",
+  tech_cta:"View treatments",
+  diag_epi:"Epidermis",diag_der:"Dermis",diag_sub:"Subcutis",
+  procs_title:"What we treat",procs_lead:"Pick an area to open the matching part of the price list.",
+  pc_epil_t:"Laser hair removal",pc_epil_p:"Face, body and bikini area for women and men.",
+  pc_lift_t:"Needle-free lifting",pc_lift_p:"Fotona 4D, Tensor Tight, VectorLift, Smooth Eye and LipLase.",
+  pc_resurf_t:"Skin resurfacing",pc_resurf_p:"SuperFacialPeel and SMOOTH mode for face, neck and décolleté.",
+  pc_vessels_t:"Veins and rosacea",pc_vessels_p:"Thread veins, spider veins, haemangiomas and redness.",
+  pc_acne_t:"Acne and scars",pc_acne_p:"Active acne, post-acne marks and scar smoothing.",
+  pc_surg_t:"Laser surgery",pc_surg_p:"Removal of benign skin lesions and papillomas.",
+  pc_nails_t:"Nail fungus and warts",pc_nails_p:"Laser treatment, priced per nail or wart.",
+  pc_hair_p:"Non-invasive laser stimulation of hair growth.",
+  pc_venus_p:"Skin tightening, cellulite and body contouring.",
+  pc_more:"See prices",
+  derma_role:"Dermatologist",derma_name:"Dr Ina Maksimova",
+  derma_note:"Sees patients at SP Lāzerklīnika in Rēzekne. Book by phone.",
+  derma_title:"Dermatologist consultations",
+  derma_lead:"Before a laser treatment or on its own — the doctor assesses your skin, moles and lesions and recommends the right treatment.",
+  d1_t:"Dermatology consultation",d1_p:"Skin assessment and a treatment plan.",
+  d2_t:"Dermatoscopy",d2_p:"Magnified mole check to catch changes early.",
+  d3_t:"Cryotherapy",d3_p:"Removal of benign skin lesions with cold.",
+  derma_cta:"Book the dermatologist",
+  prices_title:"Price list",
+  prices_lead:"Prices are in euros. The exact price is set at consultation, as it depends on the area and skin condition.",
+  search_label:"Search the price list",search_ph:"Search treatments…",
+  t_surg:"Laser surgery",t_therapy:"Laser therapy",t_resurf:"Resurfacing",t_lift:"Lifting",t_epil:"Hair removal",t_venus:"Venus Legacy",
+  empty:"Nothing found. Try another word or call",
+  epil_note:"Underarms, legs and other areas — ask for the price by phone.",
+  results:"Search results",
+  visit_title:"How a visit works",
+  v1_t:"Booking",v1_p:"Call, email or message us on Instagram to agree on a time.",
+  v2_t:"Consultation",v2_p:"We assess your skin, choose the treatment and confirm the price.",
+  v3_t:"Treatment",v3_p:"A specialist performs the treatment on Fotona SP Dynamis. Length depends on the area.",
+  v4_t:"Aftercare",v4_p:"You get skin-care advice and, if needed, your next appointment.",
+  contact_title:"Contact",
+  c_addr_k:"Address",c_tel_k:"Phone",c_mail_k:"Email",c_hours_k:"Opening",c_hours_v:"By appointment",
+  f_title:"Request a visit",f_name:"Name *",f_phone:"Phone *",f_email:"Email",f_proc:"Treatment",f_msg:"Message",
+  f_any:"Not sure yet — I need a consultation",f_derma:"Dermatologist consultation",
+  f_send:"Send request",
+  f_note:"Your email app opens with the message ready to send.",
+  f_ok:"Message prepared — finish sending it in your email window.",
+  f_subject:"Visit request",f_l_name:"Name",f_l_phone:"Phone",f_l_email:"Email",f_l_proc:"Treatment",
+  foot_about:"Laser clinic in Rēzekne with Fotona SP Dynamis. Laser hair removal, skin resurfacing, lifting and dermatologist consultations.",
+  foot_nav:"Sections",foot_contact:"Contact",
+  foot_reg:"Reg. No. 40203510972. Medical institution code 006000009.",
+  fab:"Call +371 25 425 412",
+  from:"from"
+}
+};
+const LANG_IDX = {lv:3, ru:4, en:5};
+const TILE_KEYS = {epil:'pc_epil_t',lift:'pc_lift_t',resurf:'pc_resurf_t',vessels:'pc_vessels_t',acne:'pc_acne_t',surg:'pc_surg_t',nails:'pc_nails_t',hair:null,venus:null};
+
+let lang = 'lv';
+let activeTab = 'epil';
+let focusTag = null;
+let query = '';
+
+const t = k => (I18N[lang][k] ?? I18N.lv[k] ?? '');
+const norm = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function money(min, max, isFrom){
+  const n = v => lang === 'en' ? '€' + v : v + ' €';
+  if (max) return lang === 'en' ? '€' + min + '–' + max : min + '–' + max + ' €';
+  return isFrom ? t('from') + ' ' + n(min) : n(min);
+}
+
+function rowHTML(r, hit, showGroup){
+  let [name, sub] = r[LANG_IDX[lang]].split('|');
+  if (showGroup && r[2] && r[2] !== 'face' && r[2] !== 'venus') sub = GROUPS[r[2]][lang] + (sub ? ', ' + sub : '');
+  return `<li class="row${hit ? ' hit' : ''}"><span class="nm">${esc(name)}${sub ? `<small>${esc(sub)}</small>` : ''}</span><span class="dots" aria-hidden="true"></span><span class="pr">${money(r[6], r[7], r[8])}</span></li>`;
+}
+
+function renderTabs(){
+  const box = document.getElementById('tabs');
+  box.innerHTML = TABS.map(k => `<button type="button" class="tab${!query && k === activeTab ? ' active' : ''}" role="tab" aria-selected="${!query && k === activeTab}" data-tab="${k}">${esc(t('t_' + k))}</button>`).join('');
+  box.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => {
+    activeTab = b.dataset.tab; focusTag = null; query = '';
+    document.getElementById('priceSearch').value = '';
+    renderPrices();
+  }));
+}
+
+function renderPrices(){
+  renderTabs();
+  const panel = document.getElementById('pricePanel');
+  let html = '';
+  if (query){
+    const q = norm(query);
+    const found = PRICES.filter(r => {
+      const g = r[2] ? GROUPS[r[2]][lang] : '';
+      return norm(r[LANG_IDX[lang]] + ' ' + g + ' ' + t('t_' + r[0])).includes(q);
+    });
+    if (!found.length){
+      html = `<p class="empty">${esc(t('empty'))} <a href="tel:+37125425412">+371 25 425 412</a>.</p>`;
+    } else {
+      const byTab = TABS.map(k => [k, found.filter(r => r[0] === k)]).filter(x => x[1].length);
+      html = '<div class="price-cols">' + byTab.map(([k, rows]) =>
+        `<div class="pg"><h4>${esc(t('t_' + k))}</h4><ul>${rows.map(r => rowHTML(r, false, true)).join('')}</ul></div>`).join('') + '</div>';
+    }
+  } else {
+    const rows = PRICES.filter(r => r[0] === activeTab);
+    const order = [];
+    rows.forEach(r => { const g = r[2] || '_'; if (!order.includes(g)) order.push(g); });
+    html = '<div class="price-cols">' + order.map(g => {
+      const list = rows.filter(r => (r[2] || '_') === g);
+      const head = g !== '_' ? `<h4>${esc(GROUPS[g][lang])}</h4>` : '';
+      return `<div class="pg">${head}<ul>${list.map(r => rowHTML(r, focusTag && r[1] === focusTag)).join('')}</ul></div>`;
+    }).join('') + '</div>';
+    if (activeTab === 'epil') html += `<p class="price-note">${esc(t('epil_note'))}</p>`;
+  }
+  panel.innerHTML = html;
+  const box = document.getElementById('tabs'), act = box.querySelector('.tab.active');
+  if (act && box.scrollWidth > box.clientWidth) box.scrollLeft = act.offsetLeft - box.clientWidth / 2 + act.offsetWidth / 2;
+}
+
+function renderTiles(){
+  document.querySelectorAll('.proc').forEach(a => {
+    const v = +a.dataset.from;
+    a.querySelector('.proc-from').textContent = money(v, null, !a.dataset.fixed);
+  });
+}
+
+function renderSelect(){
+  const sel = document.getElementById('cf-proc');
+  const cur = sel.value;
+  const opts = [['any', t('f_any')], ['derma', t('f_derma')]];
+  Object.entries(TILE_KEYS).forEach(([k, key]) => opts.push([k, key ? t(key) : (k === 'hair' ? 'Hair Restart' : 'Venus Legacy')]));
+  sel.innerHTML = opts.map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join('');
+  if (cur) sel.value = cur;
+}
+
+function applyLang(l){
+  lang = LANGS.includes(l) ? l : 'lv';
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = I18N[lang][el.dataset.i18n];
+    if (v !== undefined) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', t(el.dataset.i18nAria)); });
+  document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  renderTiles(); renderPrices(); renderSelect();
+  try { localStorage.setItem('sp-lang', lang); } catch(e) {}
+}
+
+/* init */
+document.getElementById('year').textContent = new Date().getFullYear();
+let startLang = 'lv';
+try { startLang = localStorage.getItem('sp-lang') || 'lv'; } catch(e) {}
+applyLang(startLang);
+
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+
+document.getElementById('priceSearch').addEventListener('input', e => {
+  query = e.target.value.trim(); focusTag = null; renderPrices();
+});
+
+document.querySelectorAll('.proc').forEach(a => a.addEventListener('click', () => {
+  activeTab = a.dataset.tab; focusTag = a.dataset.tag; query = '';
+  document.getElementById('priceSearch').value = '';
+  renderPrices();
+}));
+
+/* header */
+const header = document.getElementById('header');
+const onScroll = () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+  document.body.classList.toggle('show-fab', window.scrollY > window.innerHeight * .7);
+};
+onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+/* mobile nav */
+const mnav = document.getElementById('mnav');
+const burger = document.getElementById('burger');
+const openNav = () => { mnav.classList.add('open'); mnav.setAttribute('aria-hidden','false'); burger.classList.add('is-open'); burger.setAttribute('aria-expanded','true'); document.body.classList.add('nav-open'); document.body.style.overflow = 'hidden'; };
+const closeNav = () => { mnav.classList.remove('open'); mnav.setAttribute('aria-hidden','true'); burger.classList.remove('is-open'); burger.setAttribute('aria-expanded','false'); document.body.classList.remove('nav-open'); document.body.style.overflow = ''; };
+burger.addEventListener('click', () => mnav.classList.contains('open') ? closeNav() : openNav());
+mnav.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', closeNav));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+window.addEventListener('resize', () => { if (window.innerWidth > 1000) closeNav(); });
+
+/* form -> mailto */
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = e.target;
+  if (!f.checkValidity()) { f.reportValidity(); return; }
+  const sel = f.proc.options[f.proc.selectedIndex];
+  const subject = encodeURIComponent(`${t('f_subject')} — ${f.name.value.trim()}`);
+  const body = encodeURIComponent(
+    `${t('f_l_name')}: ${f.name.value.trim()}\n${t('f_l_phone')}: ${f.phone.value.trim()}\n${t('f_l_email')}: ${f.email.value.trim()}\n${t('f_l_proc')}: ${sel ? sel.text : ''}\n\n${f.message.value.trim()}`);
+  window.location.href = `mailto:sp.lazerklinika@gmail.com?subject=${subject}&body=${body}`;
+  document.getElementById('formOk').classList.add('show');
+  f.reset(); renderSelect();
+});
+</script>
+</body>
+</html>
